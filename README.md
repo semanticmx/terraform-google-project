@@ -30,9 +30,9 @@ provider "google" {
   zone   = var.zone
 }
 
-module "project" {
-  source     = "git::https://github.com/semanticmx/terraform-google-project.git?ref=tags/0.1.0"
-  name       = var.name
-  org_id     = var.organization_id
+module "google_project" {
+  source          = "git::https://github.com/semanticmx/terraform-google-project.git?ref=tags/1.0.0-alpha"
+  organization_id = var.organization_id
+  project_name    = var.project_name
 }
 ```
